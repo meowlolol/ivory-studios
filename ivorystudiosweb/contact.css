@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Meie+Script&display=swap');
+
+:root {
+    --green: #8eb19d;
+    --blue: #42cafd;
+    --teal: #66b3ba;
+    --yellow: #f6efa6;
+    --background: #f0d2d1;
+    --text: #4a3311;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--background);
+    color:var(--text);
+    font-family:Arial, Helvetica, sans-serif;
+    min-height:100vh;
+}
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-family:"Meie Script",cursive;
+    font-size:42px;
+    text-decoration:none;
+    color:var(--text);
+     font-weight:600;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--text);
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover,
+nav .active{
+    color:var(--blue);
+}
+
+.hero{
+    text-align:center;
+    padding:90px 20px 50px;
+}
+
+.hero h1{
+    font-family:"Meie Script",cursive;
+    font-size:72px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+.contact-container{
+    width:min(1100px,90%);
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.contact-card{
+    background:white;
+    padding:35px;
+    border-radius:22px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.3s;
+    border-top:7px solid var(--green);
+}
+
+.contact-card:nth-child(2){
+    border-top-color:var(--blue);
+}
+
+.contact-card:nth-child(3){
+    border-top-color:var(--teal);
+}
+
+.contact-card:nth-child(4){
+    border-top-color:var(--yellow);
+}
+
+.contact-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+}
+
+.contact-card h2{
+    margin-bottom:15px;
+    font-size:26px;
+}
+
+.contact-card p{
+    line-height:1.8;
+}
+
+.contact-button{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 30px;
+    background:var(--blue);
+    color:white;
+    text-decoration:none;
+    border-radius:999px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.contact-button:hover{
+    background:var(--teal);
+    transform:translateY(-3px);
+}
+
+.faq{
+    width:min(900px,90%);
+    margin:80px auto;
+}
+
+.faq h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.faq-item{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    margin-bottom:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.07);
+    border-left:6px solid var(--green);
+}
+
+.faq-item:nth-child(3){
+    border-left-color:var(--blue);
+}
+
+.faq-item:nth-child(4){
+    border-left-color:var(--teal);
+}
+
+.faq-item h3{
+    margin-bottom:10px;
+}
+
+.faq-item p{
+    line-height:1.7;
+}
+
+footer{
+    text-align:center;
+    padding:35px;
+    margin-top:70px;
+    color:var(--text);
+    background-color: var(--green);
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+}
